@@ -42,4 +42,13 @@ DELETE   /api/v1/
 ```
 
 ## GIT
-git push --set-upstream origin master 
+
+1. create git app
+2. git init
+3. git add .
+4. git commit -m "first commit"
+5. copy remote url from git and paste it
+git remote add origin https://github.com/kapoorsahil043/resource.git
+
+6. git push
+7. git push --set-upstream origin master
