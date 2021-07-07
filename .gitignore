@@ -33,7 +33,7 @@ local.properties
 #
 node_modules/
 .expo/
-public/
+##public/
 npm-debug.log
 yarn-error.log
 package-lock.json
