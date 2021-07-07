@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const { Otp } = require('../models/otp');
 const multer = require('multer');
 
 const FILE_TYPE_MAP = {
