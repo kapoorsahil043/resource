@@ -33,6 +33,7 @@ local.properties
 #
 node_modules/
 .expo/
+public/uploads/
 ##public/
 npm-debug.log
 yarn-error.log
