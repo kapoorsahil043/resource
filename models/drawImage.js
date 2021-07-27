@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { statuses } = require('../../draw-server/helpers/statuses');
+const { statuses } = require('../helpers/statuses');
 
 const drawImageSchema = mongoose.Schema({
     image: {

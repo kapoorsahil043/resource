@@ -1,4 +1,5 @@
 const statuses = {
+    inactive:0,
     active: 1,
     live: 2,
     started: 3,
