@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { statuses } = require('../../draw-server/helpers/statuses');
 
 const drawImageSchema = mongoose.Schema({
     image: {
@@ -16,12 +17,16 @@ const drawImageSchema = mongoose.Schema({
     },
     status: {
         type: Number,
-        default:1
+        default: statuses.active
     },
     createdOn: {
         type: Date,
         default: Date.now,
     },
+    description: {
+        type: String,
+    },
+   
     
 })
 

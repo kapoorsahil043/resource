@@ -28,7 +28,7 @@ const storage = multer.diskStorage({
 
 const uploadOptions = multer({ storage: storage });
 
-router.get(`/`, async (req, res) => {
+/* router.get(`/`, async (req, res) => {
     const list = await DrawImage.find();
 
     if (!list) {
@@ -36,15 +36,15 @@ router.get(`/`, async (req, res) => {
     }
 
     res.send(list);
-});
+}); */
 
-router.get(`/:id`, async (req, res) => {
+/* router.get(`/:id`, async (req, res) => {
     const list = await DrawImage.findById(req.params.id);
     if (!list) {
         res.status(500).json({ success: false });
     }
     res.send(list);
-});
+}); */
 
 router.post(`/`, uploadOptions.single('image'), async (req, res) => {
     console.log('req.user',req.user)
@@ -59,6 +59,7 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) => {
         image: `${basePath}${fileName}`,
         name: req.body.name,
         user: req.user.userId,
+        description: req.body.description,
     });
 
     data = await data.save();
@@ -68,7 +69,7 @@ router.post(`/`, uploadOptions.single('image'), async (req, res) => {
     res.send(data);
 });
 
-router.delete('/:id', (req, res)=>{
+/* router.delete('/:id', (req, res)=>{
     DrawImage.findByIdAndRemove(req.params.id).then(item =>{
         if(item) {
             return res.status(200).json({success: true, message: 'the images is deleted!'})
@@ -78,6 +79,6 @@ router.delete('/:id', (req, res)=>{
     }).catch(err=>{
        return res.status(500).json({success: false, error: err}) 
     })
-})
+}) */
 
 module.exports = router;
